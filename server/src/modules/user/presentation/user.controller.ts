@@ -41,11 +41,14 @@ export class UserController {
       }
       const hashpassord =await  hashPassord(password)
       const user = repo.create({ username, email, password : hashpassord});
-      res.json(user).status(201);
+      const savedUser = repo.save(user)
+      
+      res.status(201).json(savedUser);
     } catch (error) {
       next(error);
     }
   }
+  
   async edit(
     req: Request<{ email: string }>,
     res: Response,

@@ -22,4 +22,7 @@ export class UserRepository {
   delete(user: User) {
     return this.repo.remove(user);
   }
+  save(user: User) {
+    return this.repo.save(user);
+  }
 }
