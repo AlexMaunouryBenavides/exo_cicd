@@ -1,5 +1,5 @@
-import { AppDataSource } from "../../../config/data-source";
-import { User } from "./user.entity";
+import { AppDataSource } from "../../../config/data-source.ts";
+import { User } from "./user.entity.ts";
 
 export class UserRepository {
   private repo = AppDataSource.getRepository(User);

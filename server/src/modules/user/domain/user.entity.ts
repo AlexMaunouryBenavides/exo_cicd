@@ -5,12 +5,14 @@ export class User {
   @PrimaryGeneratedColumn("increment")
   id!: number;
 
-  @Column()
+  @Column( "varchar")
   username!: string;
 
-  @Column({ unique: true })
+  @Column("varchar",{ unique: true })
   email!: string;
 
-  @Column()
+  @Column("varchar")
   password!: string;
+
+
 }

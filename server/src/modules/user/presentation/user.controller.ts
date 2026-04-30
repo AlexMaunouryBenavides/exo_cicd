@@ -1,6 +1,7 @@
 import type { NextFunction, Request, Response } from "express";
-import type { User } from "../domain/user.entity";
-import { UserRepository } from "../domain/user.repository";
+import type { User } from "../domain/user.entity.ts";
+import { UserRepository } from "../domain/user.repository.ts";
+import { hashPassord } from "../../../shared/types/hash.ts";
 
 const repo = new UserRepository();
 
@@ -38,7 +39,8 @@ export class UserController {
         res.status(400).json({ message: "Missing required fields" });
         return;
       }
-      const user = repo.create({ username, email, password });
+      const hashpassord =await  hashPassord(password)
+      const user = repo.create({ username, email, password : hashpassord});
       res.json(user).status(201);
     } catch (error) {
       next(error);
