@@ -10,7 +10,7 @@ export const AppDataSource = new DataSource({
   host: process.env.DB_HOST || "error",
   port: parseInt(process.env.DB_PORT || "3306", 10),
   username: process.env.DB_USER || "error",
-  password: process.env.DB_PASSWORD || "error", 
+  password: process.env.DB_PASSWORD || "error",
   database: process.env.DB_NAME || "error",
   synchronize: true,
   logging: true,
