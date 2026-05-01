@@ -1,42 +1,43 @@
 {
-	"name": "server",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"type": "module",
-	"scripts": {
-		"test": "jest",
-		"build": "tsc",
-		"dev": "tsx watch ./src/app.ts",
-		"lint": "biome check --write  ",
-		"typeorm": "./node_modules/.bin/typeorm"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"@biomejs/biome": "2.4.13",
-		"@types/express": "^5.0.6",
-		"@types/jest": "^30.0.0",
-		"@types/node": "^25.6.0",
-		"jest": "^30.3.0",
-		"tsx": "^4.21.0",
-		"typescript": "^6.0.3"
-	},
-	"dependencies": {
-		"@types/cookie-parser": "^1.4.10",
-		"@types/cors": "^2.8.19",
-		"@types/jsonwebtoken": "^9.0.10",
-		"argon2": "^0.44.0",
-		"cookie-parser": "^1.4.7",
-		"cors": "^2.8.6",
-		"dotenv": "^17.4.2",
-		"express": "^5.2.1",
-		"jsonwebtoken": "^9.0.3",
-		"mysql2": "^3.22.3",
-		"reflect-metadata": "^0.2.2",
-		"ts-jest": "^29.4.9",
-		"ts-node": "^10.9.2",
-		"typeorm": "^0.3.28"
-	}
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "dev": "tsx watch ./src/app.ts",
+    "lint": "biome check --write  ",
+    "typeorm": "./node_modules/.bin/typeorm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "2.4.13",
+    "@jest/globals": "^30.3.0",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.6.0",
+    "jest": "^30.3.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/jsonwebtoken": "^9.0.10",
+    "argon2": "^0.44.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.22.3",
+    "reflect-metadata": "^0.2.2",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.28"
+  }
 }

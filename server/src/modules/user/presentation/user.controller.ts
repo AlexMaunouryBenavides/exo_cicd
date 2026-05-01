@@ -1,7 +1,7 @@
 import type { NextFunction, Request, Response } from "express";
+import { hashPassord } from "../../../shared/types/hash.ts";
 import type { User } from "../domain/user.entity.ts";
 import { UserRepository } from "../domain/user.repository.ts";
-import { hashPassord } from "../../../shared/types/hash.ts";
 
 const repo = new UserRepository();
 
@@ -39,16 +39,16 @@ export class UserController {
         res.status(400).json({ message: "Missing required fields" });
         return;
       }
-      const hashpassord =await  hashPassord(password)
-      const user = repo.create({ username, email, password : hashpassord});
-      const savedUser = repo.save(user)
-      
+      const hashpassord = await hashPassord(password);
+      const user = repo.create({ username, email, password: hashpassord });
+      const savedUser = repo.save(user);
+
       res.status(201).json(savedUser);
     } catch (error) {
       next(error);
     }
   }
-  
+
   async edit(
     req: Request<{ email: string }>,
     res: Response,
