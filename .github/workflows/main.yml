@@ -7,9 +7,9 @@ jobs:
     checker:
         name: run checker
         runs-on: ubuntu-latest
-        permissions: 
-            checks: write 
-            contents : write
+        defaults:
+            run:
+                working-directory: ./server
         steps:
             - name: checkout 
               uses: actions/checkout@v5
