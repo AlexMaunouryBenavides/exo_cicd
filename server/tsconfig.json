@@ -42,7 +42,8 @@
 		"moduleDetection": "force",
 		"skipLibCheck": true,
 		"moduleResolution": "nodenext",
-
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
 		// typeorm needs
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true
