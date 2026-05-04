@@ -20,7 +20,7 @@ jobs:
               with:
                 version: latest
             - name: Run Biome
-              run: biome ci .
+              run: npm run lint
     typecheck:
       needs: checker
       name: run typecheck
